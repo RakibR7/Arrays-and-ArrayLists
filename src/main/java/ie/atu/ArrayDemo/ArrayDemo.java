@@ -1,7 +1,10 @@
 package ie.atu.ArrayDemo;
+import java.util.Scanner;
 
 public class ArrayDemo{
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+
         int[] arrays;
         int i;
         arrays = new int[10];
@@ -21,5 +24,23 @@ public class ArrayDemo{
         {
             System.out.println("Elements at index " + i + ": " + arrays[i]);
         }
+
+
+        Scanner myScan = new Scanner(System.in);
+        try
+        {
+            System.out.println("Enter new value: ");
+            arrays[10] = myScan.nextInt();
+        }
+
+        catch (ArrayIndexOutOfBoundsException aiob)
+        {
+            System.out.println("Out of bounds");
+        }
+
+
+        //for arrayslist
+        //arrays.remove(1);
+        //arrays.get(1);
     }
 }
